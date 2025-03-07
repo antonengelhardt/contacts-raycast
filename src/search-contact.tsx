@@ -116,26 +116,13 @@ export default function Command() {
   }
 
   return (
-    <List
-      isLoading={isLoading}
-      onSearchTextChange={setSearchText}
-      searchBarPlaceholder="Search contacts..."
-      throttle
-    >
+    <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search contacts..." throttle>
       {error ? (
-        <List.EmptyView
-          icon={Icon.ExclamationMark}
-          title="Error Fetching Contacts"
-          description={error.message}
-        />
+        <List.EmptyView icon={Icon.ExclamationMark} title="Error Fetching Contacts" description={error.message} />
       ) : (
         <List.Section title="Results" subtitle={data.length + ""}>
           {data.map((contact) => (
-            <ContactListItem
-              key={contact.id}
-              contact={contact}
-              onDelete={handleDeleteContact}
-            />
+            <ContactListItem key={contact.id} contact={contact} onDelete={handleDeleteContact} />
           ))}
         </List.Section>
       )}
@@ -145,7 +132,7 @@ export default function Command() {
 
 function ContactListItem({
   contact,
-  onDelete
+  onDelete,
 }: {
   readonly contact: Contact;
   readonly onDelete: (id: string) => void;

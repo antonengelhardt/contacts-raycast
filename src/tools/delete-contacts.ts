@@ -6,9 +6,9 @@ type DeleteInput = {
    * The ID of the contact to delete
    */
   id: string;
-}
+};
 
-export const confirmation: Tool.Confirmation<DeleteInput> = async (input) => {
+export const confirmation: Tool.Confirmation<DeleteInput> = async () => {
   return {
     title: "Delete Contact",
     message: `Are you sure you want to delete this contact?`,
