@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:contacts}/swift",
+            "name": "Debug SwiftAPI (swift)",
+            "program": "${workspaceFolder:contacts}/swift/.build/debug/SwiftAPI",
+            "preLaunchTask": "swift: Build Debug SwiftAPI (swift)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:contacts}/swift",
+            "name": "Release SwiftAPI (swift)",
+            "program": "${workspaceFolder:contacts}/swift/.build/release/SwiftAPI",
+            "preLaunchTask": "swift: Build Release SwiftAPI (swift)"
+        }
+    ]
+}
